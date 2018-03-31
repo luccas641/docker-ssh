@@ -1,0 +1,12 @@
+version: '3.2'
+
+services:
+  docker-ssh  :
+    build: .
+    image: docker-ssh
+    container_name: docker-ssh
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ".:/app"
+    ports:
+      - "2222:2222"
