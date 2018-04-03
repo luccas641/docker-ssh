@@ -79,9 +79,9 @@ keysReader.on('close', () => {
             let cmd = argv._[0]
 
             if (cmd == 'exec') {
-              command.exec(container, stream, argv)
+              commands.exec(container, stream, argv)
             } else if (cmd == 'logs') {
-              command.logs(container, stream)
+              commands.logs(container, stream)
             } else {
               stream.write('Command not found.')
               stream.exit(1)
